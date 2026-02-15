@@ -1,9 +1,14 @@
 package com.example.koffemvc.entidy;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Produto {
+public class Produto implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String nome;
 	private BigDecimal preco;

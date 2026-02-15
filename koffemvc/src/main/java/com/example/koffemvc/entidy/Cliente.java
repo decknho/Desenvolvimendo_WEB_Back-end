@@ -1,11 +1,16 @@
 package com.example.koffemvc.entidy;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-public class Cliente {
+public class Cliente implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String nome;
 	

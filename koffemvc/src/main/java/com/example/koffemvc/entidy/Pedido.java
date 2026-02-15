@@ -1,8 +1,13 @@
 package com.example.koffemvc.entidy;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Pedido {
+public class Pedido implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 	private Long clienteId;
 	private Long produtoId;
