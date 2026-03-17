@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cadastro Pedido</title>
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+	<div class="container">
+	
+		<h1>Novo Pedido</h1>
+		
+		<p th:if="${erro}" th:text="${erro}" class="erro"></p>
+		
+		<form th:action="@{/pedidos/salvar}" method="post">
+
+		    <input type="hidden" name="id" th:value="${pedido.id}">
+		
+		    <label>Cliente:</label><br>
+		    <select name="clienteId">
+		        <option value="">Selecione</option>
+		        <option th:each="c : ${clientes}"
+		                th:value="${c.id}"
+		                th:text="${c.nome}">
+		        </option>
+		    </select>
+		
+		    <br><br>
+		
+		    <label>Produto:</label><br>
+		    <select name="produtoId">
+		        <option value="">Selecione</option>
+		        <option th:each="p : ${produtos}"
+		                th:value="${p.id}"
+		                th:text="${p.nome}">
+		        </option>
+		    </select>
+		
+		    <br><br>
+		
+		    <label>Quantidade:</label><br>
+		    <input type="number" name="quantidade" required><br><br>
+		
+		    <button type="submit">Salvar</button>
+		
+		</form>
+		<br>
+		<a th:href="@{/pedidos/lista}" class="btn">Voltar</a>
+	
+	</div>
+</body>
+
+</html>
