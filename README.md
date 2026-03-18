@@ -9,8 +9,9 @@
 ## Como executar
 
 1. Clonar o repositório
-2. Rodar a aplicação
-3. Acessar endpoints via Postman
+2. Mudar a senha na "application.properties" para a senha do seu banco de dados local
+3. Rodar a aplicação
+4. Acessar endpoints via Postman
 
 ## Endpoints principais
 
